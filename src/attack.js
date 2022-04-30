@@ -22,6 +22,7 @@ function fakeInteceptCipher(message) {
 }
 
 function attack() {
+function attack(m0) {
     const interceptedCipher = fakeInteceptCipher(m0) // 45190
     let interval = null
     let i = 1
