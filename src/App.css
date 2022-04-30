@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+}
+
+
+.App-body {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.time-line {
+  position: absolute;
+  width: 80%;
+  height: 20px;
+  background-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.lower-bound {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: red;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.upper-bound {
+  position: absolute;
+  width: 10px;
+  height: 40px;
+  background-color: blue;
+  top:50%;
+  transform:translateY(-50%);
+}
