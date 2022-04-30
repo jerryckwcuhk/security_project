@@ -14,8 +14,6 @@ function App() {
     S = result.S
   }
   
-  // const key = `${message}_${new Date()}`
-  console.log(key)
   return (
     <div className="App">
       <div className="App-body">
