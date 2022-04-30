@@ -27,18 +27,13 @@ function decrypt(cipher) {
 
 function isConform(encryptionBlock) {
     const headerIndex = 0
-    const paddingIndex = 4
-    const tailIndex = 8
     
     const blockLength = 4
     let binary = encryptionBlock.toString(2).padStart(16, '0')
-    const binaryLen = binary.length
     
     const header = binary.substr(headerIndex, blockLength)
-    const padding = binary.substr(paddingIndex, blockLength)
-    const tail = binary.substr(tailIndex, blockLength)
 
-    if (header !== '0010') { // || padding !== '1111' // || tail !== '0000'
+    if (header !== '0010') {
         // logger.log('Invalid Format')
         return false
     }
