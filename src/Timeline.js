@@ -20,7 +20,7 @@ function Timeline(props) {
           <div className="original-bound" style={{left: `${originalBoundLeft}%`, width: `${width}%`}}></div>
             { itervals.map(interval => {
               return (
-                <div className = 'interval-bound' style={{left: `${interval[0]}%`, width: `${interval[1] - interval[0]}%`, borderColor: `rgb(${props.color}, 0.5)`  }}></div>
+                <div className = 'interval-bound' style={{left: `${interval[0]}%`, width: `${interval[1] - interval[0]}%`, borderColor: `rgb(${props.color}, 0.5)`, backgroundColor: `rgb(${props.color}, 0.5)`  }}></div>
               )
             })
             }

@@ -2,12 +2,12 @@ import BigNumber from 'bignumber.js';
 import config from './config'
 import { searchSI } from './searchSI'
 
-import { M, narrowMI } from './narrowMI'
-import { S } from './searchSI'
+import { M, narrowMI, resetM } from './narrowMI'
+import { S, resetS } from './searchSI'
 
 import { Logger } from './utils'
 
-const { publicKey, n, m0 } = config
+const { publicKey, n } = config
 
 const logger = new Logger('attack.js')
 
@@ -21,9 +21,10 @@ function fakeInteceptCipher(message) {
     return cipher
 }
 
-function attack() {
 function attack(m0) {
     const interceptedCipher = fakeInteceptCipher(m0) // 45190
+    resetM()
+    resetS()
     let interval = null
     let i = 1
     while(i === 1 || interval.length > 1 || interval[0][0] !==  interval[0][1]) {

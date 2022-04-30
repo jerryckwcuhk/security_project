@@ -7,11 +7,9 @@ const { B, n } = config
 
 const logger = new Logger('narrowMI.js')
 
-const M = [
-    [
-        [new BigNumber(2).multipliedBy(B).toNumber(), new BigNumber(3).multipliedBy(B).minus(1).toNumber()]
-    ]
-]
+const initalBounds = [new BigNumber(2).multipliedBy(B).toNumber(), new BigNumber(3).multipliedBy(B).minus(1).toNumber()]
+
+let M = [[ initalBounds ]]
 
 function narrowMI(i, SI) {
     const currentIntervals = M[i - 1]
@@ -90,5 +88,9 @@ function createNewIntervals(i, currentIntervals, R, SI) {
     return newIntervals
 }
 
+function resetM() {
+    M = [[ initalBounds ]]
+}
 
-export { narrowMI, M }
+
+export { narrowMI, M, resetM }

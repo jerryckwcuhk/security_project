@@ -1,10 +1,11 @@
 import './App.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Timeline from './Timeline';
 import { attack } from './attack'
 
-function App(props) {
+function App() {
   const [message, setMessage] = useState(0)
+  const [key, setKey] = useState()
   let M = []
   let S = []
   if (message !== 0) {
@@ -13,9 +14,8 @@ function App(props) {
     S = result.S
   }
   
-  
-  
-
+  // const key = `${message}_${new Date()}`
+  console.log(key)
   return (
     <div className="App">
       <div className="App-body">
@@ -25,7 +25,7 @@ function App(props) {
         <button value={3000} className="message" onClick={changeData}>3000</button>
         <button value={4000} className="message" onClick={changeData}>4000</button>
        </div>
-       <Timeline M={M} S={S} color={randomColor()}></Timeline>
+       <Timeline key={key} M={M} S={S} color={randomColor()}></Timeline>
         
       </div>
     </div>
@@ -34,6 +34,7 @@ function App(props) {
   function changeData(event) {
     const message = parseInt(event.target.value)
     setMessage(msg => message)
+    setKey(item => `${message}_${new Date()}`)
   }
 }
 

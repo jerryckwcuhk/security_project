@@ -10,7 +10,7 @@ const { publicKey, n, B } = config
 const logger = new Logger('searchSI.js')
 
 const s1 = new BigNumber(n).dividedBy(3 * B).integerValue(BigNumber.ROUND_CEIL).toNumber()
-const S = [1]
+let S = [1]
 
 function searchSI(i, cipher) {
     // let currentSi = S[i]
@@ -95,4 +95,8 @@ function checkWithServer(SI, cipher) {
     return isValid
 }
 
-export { searchSI, S }
+function resetS() {
+    S = [1]
+}
+
+export { searchSI, S, resetS }

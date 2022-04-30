@@ -26,15 +26,6 @@
   text-align: center;
 }
 
-/* .lower-bound {
-  position: absolute;
-  width: 3px;
-  height: 40px;
-  background-color: red;
-  top:50%;
-  transform:translateY(-50%);
-} */
-
 .original-bound {
   position: absolute;
   height: 40px;
@@ -69,10 +60,7 @@
   width: 1024px;
   height: 40px;
   border: 5px solid rgb(190, 50, 233);
-  /* margin-left: 200px; */
-  /* margin-right: auto; */
   left: 0;
-  /* right: 0; */
   text-align: center;
   top: 100px
 }
@@ -89,16 +77,11 @@
 .message-wrapper {
   box-sizing: border-box;
   display: flex;
-  /* width: 100px; */
-  /* height: 40px; */
-  /* border: 3px solid; */
   color: blue;
   background: transparent;
-  /* border-radius: 20px; */
   margin-left: 200px;
   margin-top: 300px;
   margin-bottom: 100px;
-  /* margin-right: auto; */
 }
 
 .message {
