@@ -6,8 +6,6 @@ import App from './App';
 
 
 const { M, S } = attack()
-console.log(M)
-console.log(S)
 ReactDOM.render(
   <React.StrictMode>
     <App M={M} S={S}/>

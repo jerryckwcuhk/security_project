@@ -63,7 +63,6 @@ function App(props) {
           MI.push([lowerBound, upperBound])
           enlargedMI.push([enlargedLowerbound, enlargedUpperbound])
         }
-        // console.log(MI)
         setIntervals(itervals => MI)
         setEnlargedIntervals(intervals => enlargedMI)
         setIteration(iteration => iteration + 1)
