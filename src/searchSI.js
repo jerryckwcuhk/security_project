@@ -1,8 +1,10 @@
-const { BigNumber } = require('bignumber.js');
-const { call } = require('./server.js')
-const { Logger } = require('./utils')
-const { M } = require('./narrowMI')
-const { config } = require('./config')
+import BigNumber from 'bignumber.js';
+import { call } from './server'
+
+import { Logger } from './utils'
+import { narrowMI, M } from './narrowMI'
+import config from './config'
+
 const { publicKey, n, B } = config
 
 const logger = new Logger('searchSI.js')

@@ -15,4 +15,4 @@ Logger.prototype.hiddenLog = function log(message) {
     console.log(`[${this.name}]<hidden>${message}</hidden>`)
 }
 
-exports.Logger = Logger
+export { Logger } 

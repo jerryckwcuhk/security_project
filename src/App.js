@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import config from './config'
+import { attack } from './attack'
 
 function App() {
   const [lowerBoundLeft, setLowerBound] = useState(100);
@@ -9,6 +10,8 @@ function App() {
   // useEffect(changeRandomly)
   const originalBoundLeft = ((2 * config.B) / (config.max)) * 100
   const width = (config.B / config.max) * 100
+
+  attack()
 
   return (
     <div className="App">

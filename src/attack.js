@@ -1,15 +1,14 @@
-const { BigNumber } = require('bignumber.js');
-const { searchSI } = require('./searchSI')
-const { narrowMI, M } = require('./narrowMI')
-const { Logger } = require('./utils')
-const { config } = require('./config')
+import BigNumber from 'bignumber.js';
+import config from './config'
+import { searchSI } from './searchSI'
+
+import { narrowMI } from './narrowMI'
+
+import { Logger } from './utils'
+
 const { publicKey, n, m0 } = config
 
 const logger = new Logger('attack.js')
-
-function start() {
-    attack()
-}
 
 
 
@@ -36,6 +35,4 @@ function attack() {
     }
 }
 
-start()
-
-// narrowMI(0, 1338)
+export { attack }

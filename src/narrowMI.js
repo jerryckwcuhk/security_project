@@ -1,7 +1,8 @@
-const { BigNumber } = require('bignumber.js');
-const { Logger } = require('./utils')
-const intersectRanges = require('intersecting-ranges')
-const { config } = require('./config')
+import BigNumber from 'bignumber.js';
+import { Logger } from './utils'
+import intersectRanges from 'intersecting-ranges'
+import config from './config'
+
 const { B, n } = config
 
 const logger = new Logger('narrowMI.js')
@@ -91,6 +92,4 @@ function createNewIntervals(i, currentIntervals, R, SI) {
 }
 
 
-exports.narrowMI = narrowMI
-
-exports.M = M
+export { narrowMI, M }

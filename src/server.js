@@ -1,6 +1,7 @@
-const bigNumber = require('bignumber.js');
-const { Logger } = require('./utils')
-const { config } = require('./config')
+import BigNumber from 'bignumber.js';
+import { Logger } from './utils'
+import config from './config'
+
 const { privateKey, n } = config
 
 function call(cipher) {
@@ -12,7 +13,7 @@ const logger = new Logger('server.js')
 
 
 function decrypt(cipher) {
-    const message = (new bigNumber(cipher).exponentiatedBy(privateKey, n))
+    const message = (new BigNumber(cipher).exponentiatedBy(privateKey, n))
     const encryptionBlock = message.toNumber()
     if(isConform(encryptionBlock)) {
         const blockLength = 4
@@ -44,4 +45,4 @@ function isConform(encryptionBlock) {
     return true
 }
 
-exports.call = call
+export { call }
