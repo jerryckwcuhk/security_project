@@ -95,4 +95,4 @@ function checkWithServer(SI, cipher) {
     return isValid
 }
 
-export { searchSI }
+export { searchSI, S }

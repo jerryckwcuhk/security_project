@@ -5,11 +5,12 @@ import { attack } from './attack'
 import App from './App';
 
 
-const intervals = attack()
-
+const { M, S } = attack()
+console.log(M)
+console.log(S)
 ReactDOM.render(
   <React.StrictMode>
-    <App intervals={intervals}/>
+    <App M={M} S={S}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

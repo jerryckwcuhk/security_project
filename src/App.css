@@ -35,15 +35,6 @@
   transform:translateY(-50%);
 }
 
-.upper-bound {
-  position: absolute;
-  width: 3px;
-  height: 40px;
-  background-color: blue;
-  top:50%;
-  transform:translateY(-50%);
-}
-
 .original-bound {
   position: absolute;
   height: 40px;
@@ -51,4 +42,14 @@
   top:50%;
   border: 5px solid rgb(190, 50, 233);
   transform:translateY(-50%);
+}
+
+.interval-bound {
+  position: absolute;
+  height: 40px;
+  /* background-color: rgb(190, 50, 233); */
+  top:50%;
+  border: 5px solid rgb(50, 233, 96, 0.5);
+  transform:translateY(-50%);
+  box-sizing: border-box;
 }

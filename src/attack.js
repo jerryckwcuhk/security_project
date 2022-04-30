@@ -3,6 +3,7 @@ import config from './config'
 import { searchSI } from './searchSI'
 
 import { M, narrowMI } from './narrowMI'
+import { S } from './searchSI'
 
 import { Logger } from './utils'
 
@@ -35,7 +36,10 @@ function attack() {
     logger.log(`original Message found: ${originalMessage}`)
 
 
-    return M
+    return {
+        M,
+        S
+    }
 }
 
 export { attack }
