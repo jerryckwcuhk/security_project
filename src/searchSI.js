@@ -2,7 +2,7 @@ import BigNumber from 'bignumber.js';
 import { call } from './server'
 
 import { Logger } from './utils'
-import { narrowMI, M } from './narrowMI'
+import { M } from './narrowMI'
 import config from './config'
 
 const { publicKey, n, B } = config

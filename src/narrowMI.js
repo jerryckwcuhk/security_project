@@ -82,7 +82,6 @@ function createNewIntervals(i, currentIntervals, R, SI) {
     })
     
     const newIntervals = intersectRanges(tempIntervals, { omitEmpty: false })
-    logger.log({ newIntervals })
     if (tempIntervals.length > newIntervals.length) {
         logger.log(`temp interval length: ${tempIntervals.length}, New interval length: ${newIntervals.length}`)
     }

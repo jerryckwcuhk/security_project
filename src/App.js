@@ -1,17 +1,19 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import config from './config'
-import { attack } from './attack'
 
-function App() {
+
+function App(props) {
   const [lowerBoundLeft, setLowerBound] = useState(100);
   const [upperBoundLeft, setUpperBound] = useState(100);
   
-  // useEffect(changeRandomly)
+  
   const originalBoundLeft = ((2 * config.B) / (config.max)) * 100
   const width = (config.B / config.max) * 100
 
-  attack()
+  useEffect(animate)
+
+  
 
   return (
     <div className="App">
@@ -26,7 +28,7 @@ function App() {
     </div>
   );
 
-  function changeRandomly() {
+  function animate() {
     const id = setInterval(() => {
       const randomVal = Math.floor(Math.random() * 100);
       setLowerBound(lowerBoundLeft => randomVal)
