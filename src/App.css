@@ -38,7 +38,6 @@
 .original-bound {
   position: absolute;
   height: 40px;
-  /* background-color: rgb(190, 50, 233); */
   top:50%;
   border: 5px solid rgb(190, 50, 233);
   transform:translateY(-50%);
@@ -46,10 +45,9 @@
 
 .interval-bound {
   position: absolute;
-  height: 40px;
-  /* background-color: rgb(190, 50, 233); */
+  height: 40px; 
   top:50%;
-  border: 3px solid rgb(233, 50, 50, 0.5);
+  border: 3px solid ;
   transform:translateY(-50%);
   box-sizing: border-box;
 }
@@ -82,9 +80,8 @@
 .enlarged-interval-bound {
   position: absolute;
   height: 40px;
-  background-color: rgb(233, 50, 50);
   top:50%;
-  border: 1px solid rgb(233, 50, 50);
+  border: 1px solid;
   transform:translateY(-50%);
   box-sizing: border-box;
 }

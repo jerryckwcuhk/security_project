@@ -14,7 +14,6 @@ function App(props) {
   
   const originalBoundLeft = getPercentage(2 * B)
   const width = getPercentage(B)
-
   useEffect(animate)
 
   
@@ -23,10 +22,10 @@ function App(props) {
     <div className="App">
       <div className="App-body">
         <div className='time-line'>
-          <div className="original-bound" style={{left: `${originalBoundLeft}%`, width: `${width}%` }}></div>
+          <div className="original-bound" style={{left: `${originalBoundLeft}%`, width: `${width}%`}}></div>
             { itervals.map(interval => {
               return (
-                <div className = 'interval-bound' style={{left: `${interval[0]}%`, width: `${interval[1] - interval[0]}%` }}></div>
+                <div className = 'interval-bound' style={{left: `${interval[0]}%`, width: `${interval[1] - interval[0]}%`, borderColor: `rgb(${props.color}, 0.5)`  }}></div>
               )
             })
             }
@@ -36,7 +35,7 @@ function App(props) {
               { 
                 enlargedIntervals.map(interval => {
                   return (
-                    <div className = 'enlarged-interval-bound' style={{left: `${interval[0]}%`, width: `${interval[1] - interval[0]}%` }}></div>
+                    <div className = 'enlarged-interval-bound' style={{left: `${interval[0]}%`, width: `${interval[1] - interval[0]}%`, borderColor: `rgb(${props.color})`, backgroundColor: `rgb(${props.color})`}}></div>
                   )
                 })
               }
