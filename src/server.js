@@ -27,7 +27,6 @@ function decrypt(cipher) {
 
 function isConform(encryptionBlock) {
     const headerIndex = 0
-    
     const blockLength = 4
     let binary = encryptionBlock.toString(2).padStart(16, '0')
     

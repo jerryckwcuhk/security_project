@@ -14,8 +14,8 @@ const logger = new Logger('attack.js')
 
 
 function fakeInteceptCipher(message) {
-    const binary = message.toString(2).padStart(4, '0')
-    const encryptionBlock = parseInt(`001011110000${binary}`, 2) // 12036
+    const binary = message.toString(2).padStart(12, '0')
+    const encryptionBlock = parseInt(`0010${binary}`, 2) // 12036
     const cipher = new BigNumber(encryptionBlock).exponentiatedBy(publicKey, n).toNumber()
     logger.log(`intercepted cipher: ${cipher}`)
     return cipher
@@ -32,7 +32,7 @@ function attack() {
     }
 
     const encryptionBlock = interval[0][0].toString(2)
-    const originalMessage = parseInt(encryptionBlock.substr(-4), 2)
+    const originalMessage = parseInt(encryptionBlock.substr(-12), 2)
     logger.log(`original Message found: ${originalMessage}`)
 
 
