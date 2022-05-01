@@ -23,7 +23,7 @@ function App() {
         <button value={3000} className="message" onClick={changeData}>3000</button>
         <button value={4000} className="message" onClick={changeData}>4000</button>
        </div>
-       <Timeline key={key} M={M} S={S} color={randomColor(message)}></Timeline>
+       <Timeline key={key} M={M} S={S} color={getColor(message)}></Timeline>
         
       </div>
     </div>
@@ -36,7 +36,7 @@ function App() {
   }
 }
 
-function randomColor(message) {
+function getColor(message) {
   let color
   switch (message){
     case 1000:
