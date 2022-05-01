@@ -46,7 +46,7 @@ function getColor(message) {
       color = '255, 165, 0'
       break
     case 3000:
-      color = '255, 255, 0'
+      color = '0, 0, 255'
       break
     case 4000:
       color = '0, 128, 0'
