@@ -17,7 +17,7 @@ function fakeInteceptCipher(message) {
     const binary = message.toString(2).padStart(12, '0')
     const encryptionBlock = parseInt(`0010${binary}`, 2) // 12036
     const cipher = new BigNumber(encryptionBlock).exponentiatedBy(publicKey, n).toNumber()
-    logger.log(`intercepted cipher: ${cipher}`)
+    logger.log(`original message: ${message}, encryption block: 0010${binary}, cipher: ${cipher}`)
     return cipher
 }
 

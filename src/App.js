@@ -23,7 +23,7 @@ function App() {
         <button value={3000} className="message" onClick={changeData}>3000</button>
         <button value={4000} className="message" onClick={changeData}>4000</button>
        </div>
-       <Timeline key={key} M={M} S={S} color={randomColor()}></Timeline>
+       <Timeline key={key} M={M} S={S} color={randomColor(message)}></Timeline>
         
       </div>
     </div>
@@ -36,11 +36,29 @@ function App() {
   }
 }
 
-function randomColor() {
-  const r = `${Math.round(Math.random()*255)}`
-  const g = `${Math.round(Math.random()*255)}`
-  const b = `${Math.round(Math.random()*255)}`
-  return `${r}, ${g}, ${b}`
+function randomColor(message) {
+  let color
+  switch (message){
+    case 1000:
+      color = '255, 0, 0'
+      break
+    case 2000:
+      color = '255, 165, 0'
+      break
+    case 3000:
+      color = '255, 255, 0'
+      break
+    case 4000:
+      color = '0, 128, 0'
+      break
+    default:
+      color = '0, 0, 0'
+  }
+      
+  // const r = `${Math.round(Math.random()*255)}`
+  // const g = `${Math.round(Math.random()*255)}`
+  // const b = `${Math.round(Math.random()*255)}`
+  return color
 }
 
 
